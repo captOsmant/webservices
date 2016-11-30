@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<definitions name='RServer' targetNamespace='http://example.org/'  xmlns:tns='http://example.org/'  xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'  xmlns:xsd='http://www.w3.org/2001/XMLSchema'  xmlns:soapenc='http://schemas.xmlsoap.org/soap/encoding/'  xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'  xmlns='http://schemas.xmlsoap.org/wsdl/'> 
+    
+    
+    <message name='getCategoriesRequest'>
+    </message>
+    
+    <message name='getCategoriesResponse'>
+        <part name='data' type='xsd:string'/>
+    </message>
+    
+    <message name='getItemsOfRequest'>
+	<part name='id' type='xsd:integer' />
+    </message>
+    
+    <message name='getItemsOfResponse'>
+        <part name='data' type='xsd:string'/>
+    </message>
+    
+    <message name='searchRequest'>
+	<part name='id' type='xsd:integer' />
+	<part name='from' type='xsd:float' />
+	<part name='to' type='xsd:float' />
+    </message>
+    
+    <message name='searchResponse'>
+        <part name='data' type='xsd:string'/>
+    </message>
+    
+    <message name='getSimilarRequest'>
+	<part name='id' type='xsd:integer' />
+    </message>
+    
+    <message name='getSimilarResponse'>
+        <part name='data' type='xsd:string'/>
+    </message>
+    
+    <message name='detailsRequest'>
+	<part name='id' type='xsd:integer' />
+    </message>
+    
+    <message name='detailsResponse'>
+        <part name='data' type='xsd:string'/>
+    </message>
+    
+    <message name='getPopularsRequest'>
+	<part name='n' type='xsd:integer' />
+    </message>
+    
+    <message name='getPopularsResponse'>
+        <part name='data' type='xsd:string'/>
+    </message>
+    
+    <message name='getSumRequest'>
+	<part name='a' type='xsd:float' />
+	<part name='b' type='xsd:float' />
+    </message>
+    
+    <message name='getSumResponse'>
+        <part name='data' type='xsd:float'/>
+    </message>
+    
+    <message name='getArticlesRequest'>
+    </message>
+    
+    <message name='getArticlesResponse'>
+        <part name='data' type='xsd:string'/>
+    </message>
+    
+    <message name='getArticleContentRequest'>
+	<part name='id' type='xsd:integer' />
+    </message>
+    
+    <message name='getArticleContentResponse'>
+        <part name='data' type='xsd:string'/>
+    </message>
+
+    <portType name='RServerPortType'> 
+        
+
+        <operation name='getCategories'> 
+            <input message='tns:getCategoriesRequest'/> 
+            <output message='tns:getCategoriesResponse'/> 
+        </operation>
+    
+
+        <operation name='getItemsOf'> 
+            <input message='tns:getItemsOfRequest'/> 
+            <output message='tns:getItemsOfResponse'/> 
+        </operation>
+    
+
+        <operation name='search'> 
+            <input message='tns:searchRequest'/> 
+            <output message='tns:searchResponse'/> 
+        </operation>
+    
+
+        <operation name='getSimilar'> 
+            <input message='tns:getSimilarRequest'/> 
+            <output message='tns:getSimilarResponse'/> 
+        </operation>
+    
+
+        <operation name='details'> 
+            <input message='tns:detailsRequest'/> 
+            <output message='tns:detailsResponse'/> 
+        </operation>
+    
+
+        <operation name='getPopulars'> 
+            <input message='tns:getPopularsRequest'/> 
+            <output message='tns:getPopularsResponse'/> 
+        </operation>
+    
+
+        <operation name='getSum'> 
+            <input message='tns:getSumRequest'/> 
+            <output message='tns:getSumResponse'/> 
+        </operation>
+    
+
+        <operation name='getArticles'> 
+            <input message='tns:getArticlesRequest'/> 
+            <output message='tns:getArticlesResponse'/> 
+        </operation>
+    
+
+        <operation name='getArticleContent'> 
+            <input message='tns:getArticleContentRequest'/> 
+            <output message='tns:getArticleContentResponse'/> 
+        </operation>
+    
+    </portType> 
+    
+    <binding name='RServerBinding' type='tns:RServerPortType'> 
+        <soap:binding style='rpc' transport='http://schemas.xmlsoap.org/soap/http'/> 
+        
+
+        <operation name='getCategories'> 
+            <input> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </input> 
+            
+            <output> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </output> 
+        </operation>
+    
+
+        <operation name='getItemsOf'> 
+            <input> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </input> 
+            
+            <output> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </output> 
+        </operation>
+    
+
+        <operation name='search'> 
+            <input> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </input> 
+            
+            <output> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </output> 
+        </operation>
+    
+
+        <operation name='getSimilar'> 
+            <input> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </input> 
+            
+            <output> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </output> 
+        </operation>
+    
+
+        <operation name='details'> 
+            <input> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </input> 
+            
+            <output> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </output> 
+        </operation>
+    
+
+        <operation name='getPopulars'> 
+            <input> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </input> 
+            
+            <output> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </output> 
+        </operation>
+    
+
+        <operation name='getSum'> 
+            <input> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </input> 
+            
+            <output> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </output> 
+        </operation>
+    
+
+        <operation name='getArticles'> 
+            <input> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </input> 
+            
+            <output> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </output> 
+        </operation>
+    
+
+        <operation name='getArticleContent'> 
+            <input> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </input> 
+            
+            <output> 
+               <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+            </output> 
+        </operation>
+    
+    </binding>
+    
+    <service name='RServer'> 
+        <port name='RServerPort' binding='RServerBinding'> 
+            <soap:address location='http://services.retarcorp.com/server.php'/>
+        </port> 
+    </service>
+
+</definitions>

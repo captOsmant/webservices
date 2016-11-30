@@ -1,0 +1,285 @@
+body{
+    margin: 0;
+    color: #333;
+    font-family: 'Roboto','Open Sans', "Verdana", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 5%;
+    background-color: #333;
+    color: #efefef;
+}
+header h2{
+    font-size: 140%;
+    font-family: "Roboto Light";
+    width: 40%;
+    float: left;
+}
+header nav{
+    display: block;
+    float: right;
+    
+}
+header nav li{
+    display: inline-block;
+    vertical-align: top;
+}
+header nav li a{
+    display: block;
+    padding: 7px 15px;
+    color: #efefef;
+    font-size: 90%;
+    text-decoration: none;
+    transition: .3s;
+    
+}
+header nav li a.active,
+header nav li a:hover{
+    background-color: #efefef;
+    color: #333;
+}
+main{
+    margin-top: 40px;
+    display: block;
+    padding: 50px 5%;
+}
+
+
+.goods aside{
+    display: block;
+    float: left;
+    width: 20%;
+}
+#cats li{
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+#cats li:hover,#cats li.active{
+    background-color: #f0fff0;
+    
+    border-radius: 5px;
+}
+#cats li h3{
+    margin-bottom: 5px;
+    font-size: 120%;
+    color: #282;
+}
+#cats li p{
+    font-size: 90%;
+    color: #444;
+}
+
+.goods article{
+    float: right;
+    width: 70%;
+    
+}
+
+.goods:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.items{
+    font-size: 0;
+}
+.items li{
+    display: inline-block;
+    width: 30%;
+    margin-right: 5%;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid rgba(70,110,30,0.4);
+    border-radius: 5px;
+    margin-bottom: 5%;
+    cursor: pointer;
+    
+}
+.items li:hover, #items li.active{
+    background-color: #f0fff0;
+}
+.items li:nth-child(3n){
+    margin-right: 0;
+}
+.items li figure img{
+    display: block;
+    height: 150px;
+    margin: 0 auto;
+
+}
+.items li figure figcaption{
+    text-align: center;
+}
+.items li figure figcaption h3{
+    margin-bottom: 10px;
+}
+.items li figure figcaption p{
+    font-size: 80%;
+}
+.items li figure div{
+    margin-top: 10px;
+}
+
+#details div figure img{
+    width: 40%;
+    display: block;
+    float: left;
+    margin: 10px;
+}
+#details div figure figcaption h3{
+    font-size: 140%;
+    margin-bottom: 5px;
+}
+#details div figure figcaption>p{
+    font-size: 90%;
+    color: #591;
+    margin-bottom: 20px;
+}
+#details div figure figcaption>div{
+    font-size: 80%;
+    font-weight: thin;
+}
+#details div figure figcaption>div p, #details div figure figcaption>div div{
+    margin-bottom: 15px;
+}
+#details h2{
+    margin: 20px 0;
+}
+
+form label{
+    display: block;
+    margin-bottom: 5px;
+}
+form label span{
+    font-size: 90%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 3px;
+}
+form#search label input{
+    width: 6em;
+    padding:3px;
+    font-family: inherit;
+    vertical-align: top;
+    float: right;
+}
+input[type='submit'], input[type='button']{
+    border: 1px solid #333;
+    background-color: #333;
+    color: #efefef;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 7px 10px;
+    font-family: inherit;
+}
+form#search input[type='submit']{
+    float: right;
+}
+
+
+#news{
+    font-size: 0;
+}
+#news li{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    width: 47.5%;
+    font-size: 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px;
+}
+#news li:nth-child(2n){
+    margin-right: 0;
+}
+
+#news li img{
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    -webkit-object-fit: cover;
+    -moz-object-fit: cover;
+    -o-object-fit: cover;
+}
+#news li  figcaption{
+    padding: 10px;
+    background-color: #333;
+    color: #efefef;
+    
+}
+#news li h3{
+    margin-bottom: 10px;
+    font-size: 150%;
+}
+#news li p{
+    font-size: 90%;
+}
+#articleContents>a{
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    color: #181;
+}
+#articleContents figure img{
+    width: 45%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    display: block;
+}
+#articleContents figure h3{
+    font-size: 150%;
+    margin-bottom: 15px;
+}
+#articleContents figure figcaption>div{
+    font-size: 85%;
+}
+#articleContents figure figcaption>div div, #articleContents figure figcaption>div p{
+    margin-bottom: 15px;
+}
+
+form.signin{
+    display: block;
+}
+form.signin label{
+    display: block;
+    width: 40%;
+    margin-bottom: 10px;
+}
+form.signin label *{
+    display: block;
+}
+form.signin label input{
+    padding: 5px 8px;
+    border: 1px solid #777;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+hgroup{
+    margin-bottom: 15px;
+}
+
+
+
+
+
+

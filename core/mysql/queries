@@ -1,0 +1,817 @@
+insert into users VALUES (default, '6c30734811916b0f0f24a4630b08036f', default, 1, 'Maria', '')---
+insert into users VALUES (default, '6c30734811916b0f0f24a4630b08036f', default, 2, 'Admin', '')---
+insert into users VALUES (default, '6c30734811916b0f0f24a4630b08036f', default, 2, 'Denis', '')---
+create table users
+( id INT NOT NULL PRIMARY KEY AUTO_INCREMENT
+,password VARCHAR(100)
+,ssid VARCHAR(100) DEFAULT ''
+,role int
+,name VARCHAR(100)
+,data TEXT
+)---
+drop table users---
+insert into users VALUES (default, default, 2, 'Denis', '')---
+insert into users VALUES (default, default, 1, 'Maria', '')---
+---
+create table users
+( id INT NOT NULL PRIMARY KEY AUTO_INCREMENT
+,ssid VARCHAR(100) DEFAULT ''
+,role int
+,name VARCHAR(100)
+,data TEXT
+)---
+select * from cata_catalogs---
+alter table goods_items add column views INT after amount---
+update cata_catalogs set skin='{"goods_categories":{"title":{"type":"TEXTLINE","title":"Название"},"description":{"type":"FTEXT","title":"Описание"},"img":{"type":"IMAGE","title":"Изображение"},"data":{"type":"PTEXT","title":"data"}},"goods_items":{"title":{"type":"TEXTLINE","title":"Название товара"},"shorthand":{"type":"PTEXT","title":"Краткое описание"},"description":{"type":"FTEXT","title":"Полное описание"},"price":{"type":"CFLOAT","title":"Цена"},"created":{"type":"CDATETIME","title":"Дата создания"},"weight":{"type":"CFLOAT","title":"Масса"},"amount":{"type":"NUMBER","title":"Кол-во на складе"},"views":{
+"type":"NUMBER", "title":"Число просмотров"
+},"image":{"type":"IMAGE","title":"Картинка"},"data":{"type":"PTEXT","title":"data"}}}' where id=3---
+select * from cata_catalogs---
+update cata_catalogs set tables='{"goods_categories":{"title":"VARCHAR(1000)","description":"TEXT","img":"INT","data":"TEXT"},"goods_items":{"title":"VARCHAR(1000)","shorthand":"TEXT","description":"TEXT","price":"FLOAT","created":"DATETIME","weight":"FLOAT","amount":"INT","image":"INT","views":"INT","data":"TEXT"}}' where id=3 ---
+select * from cata_catalogs---
+select * from cata_catalogs---
+select * from (select title, img, price,shorthand, item_id from addons_items inner join addons_goods on addons_items.parent = addons_goods.id) as old where item_id NOT IN (select parent from goods_gallery)---
+select * from goods_gallery---
+select * from (select title, img, price,shorthand, item_id from addons_items inner join addons_goods on addons_items.parent = addons_goods.id) as old---
+select * from addons_items---
+select * from (select title, img, price,shorthand, item_id from addons_items inner join addons_goods on addons_items.parent = addons_goods.id) as old---
+select title, img, price,shorthand, item_id from (select * from addons_items inner join addons_goods on addons_items.parent = addons_goods.id) as old---
+select title, img, price,shorthand, item_id from (select * from addons_items inner join addons_goods on addons_items.parent = addons_goods.id)---
+sselect title, img, price,shorthand, item_id from (select * from addons_items inner join addons_goods on addons_items.parent = addons_goods.id)---
+sselect title, img, price,shorthand, item_id from (select * from addons_items inner join addons_goods on addons_items.parent = addons_goods.id) as old---
+select * from addons_items inner join addons_goods on addons_items.parent = addons_goods.id---
+select * from addons_items---
+select * from goods_gallery---
+delete from  goods_items where id=460---
+delete from  goods_items where id=459---
+select * from goods_items---
+select * from cata_catalogs---
+delete from cata_apps_items where name='sliders'---
+select * from cata_apps_items---
+select * from cata_apps_apps---
+SELECT * FROM goods_items WHERE parent=1017 AND name LIKE %Пленка% and price<=100 and price >=1 and 1---
+delete from basket_user---
+select * from basket_user---
+select * from basket_users---
+select * from basket_items---
+select * from basket_items---
+select * from basket_items---
+select * from basket_items---
+delete from basket_items---
+select * from basket_items---
+select * from basket_items---
+select * from basket_items---
+select * from basket_user---
+describe basket_items---
+describe basket_user---
+select * from cata_catalogs---
+describe basket_baskets---
+select * from _articles---
+delete from _articles---
+select * from _articles---
+describe _articles---
+select * from cata_catalogs---
+update cata_catalogs set name='news' where id=9---
+select * from cata_catalogs---
+describe news_article---
+describe news_articles---
+decribe news_articles---
+select * from news---
+delete from cata_catalogs where id=8---
+select * from cata_catalogs---
+drop table news_articles---
+describe news_articles---
+delete from news_articles---
+select * from news---
+select * from news---
+show tables---
+select * from basket limit 0,30---
+select count(*) from basket---
+delete from basket where amount = 0---
+select * from basket limit 0,30---
+select count(*) from basket---
+---
+select * from basket---
+describe goods_gallery---
+select * from goods_gallery---
+describe goods_gallery---
+update goods_items set c_order_id = id---
+update goods_items set c_order_id = id+10000---
+update goods_items set c_order_id = id---
+update goods_items set c_order_id = 381 where id=379---
+select id, c_order_id from goods_items order by c_order_id---
+update goods_items set c_order_id = 379 where id=379---
+select id, c_order_id from goods_items order by c_order_id---
+select id, c_order_id from goods_items---
+select c_order_id from goods_items---
+select * from goods_items---
+select * from goos_items---
+INSERT INTO goods_items VALUES (default, 443,  ,'Штакетник металлический Полиэстер двухсторонний 0,5мм RAL6005','metalloproduktsiya','1697','Металлический штакетник без преувеличения можно смело назвать забором нового поколения. Элементы забора изготавливается из оцинкованной стали, толщиной 0,5мм с нанесенным защитно-декоративным полимерным покрытием. Покрытие может быть односторонним или двухсторонним (более популярным). Такой тип металла с полимерным покрытием используется для производства металлочерепицы и водосточных металлических систем. Забор, изготовленный из металлического штакетника надолго сохранит привлекательный внешний вид (срок службы не менее 20-25 лет), его нет необходимости дополнительно подкрашивать и ремонтировать.','<table><tr> <td>Параметры	
+</td> <td> </td> </tr><tr> <td>Толщина стали </td> <td> 	0,45-0,5 мм
+</td> </tr><tr> <td>Цинковое покрытие </td> <td> 	275-285 г/м2
+</td> </tr><tr> <td>Покрытие глянцевое </td> <td> 	25 мкм
+</td> </tr><tr> <td>Покрытие матовое </td> <td> 	35 мкм
+</td> </tr><tr> <td>Высота профиля </td> <td> 	19 мм
+</td> </tr><tr> <td>Ширина штакетника </td> <td> 	116 мм
+</td> </tr><tr> <td>Ребра жесткости </td> <td> 	12
+</td> </tr><tr> <td>Длина </td> <td> 	от 0,3 м до 3 м
+</td> </tr><tr> <td>Вес </td> <td> 	(1 м.п)	0,6-0,67 кг/м.п</td> </tr></table>','Евроштакетник для забора имеет меньшую парусность относительно забора из профнастила. При повреждении евроштакетника не нужно менять все секцию, проще заменить только несколько штакетин. Металлический штакетник – привлекательная цена, долговечность, дизайн, прост в монтаже. Металлический евроштакетник – популярный вариант при строительстве.','Беларусь','2.2','м.п.','1','1','','2016-09-20 15:54:37')---
+describe goods_items---
+describe goods_subcats---
+describe goods_cats---
+select visible from goods_items---
+describe goods_items---
+select * from goods_items---
+describe goods_items---
+describe goods_cats---
+describe goods_subcats---
+describe goods_items---
+INSERT INTO goods_items VALUES (default, 442, 1064 ,'Новый товар','','0','Описание товара пока пусто','{}','','','','0','шт.','1','1','','2016-09-20 10:58:07')---
+describe goods_items---
+describe goods_items---
+select * from goods_items---
+select count(*) from goods_items---
+select  * from goods_cats---
+alter table goods_cats add column description TEXT after type---
+select  * from goods_cats---
+select * from goods_cats where type='montazhnye-peny-germetiki'---
+select  * from goods_gallery---
+insert into goods_gallery select id, id as c_order_id, item_id as parent, title, img, shorthand as description, price from (select i.*, f.item_id  from addons_items i inner join addons_goods f on (f.id = i.parent) order by id) as z---
+insert into goods_gallery select id, id as c_order_id, item_id as parent, title, img, shorthand as description, price from (select i.*, f.item_id  from addons_items i inner join addons_goods f on (f.id = i.parent) order by id)---
+describe goods_gallery---
+select i.*, f.item_id  from addons_items i inner join addons_goods f on (f.id = i.parent) order by id---
+select i.*, f.item_id  from addons_items i inner join addons_goods f on (f.id = i.parent)---
+select i.id as i_id , * from addons_items i inner join addons_goods f on (f.id = i.parent)---
+select * from addons_items i inner join addons_goods f on (f.id = i.parent)---
+show tables---
+select * from addons_items i inner join addons_addons f on (f.id = i.parent)---
+select * from addons_items i inner join addons_folders f on (f.id = i.parent)---
+select * from addons_items---
+select * from cata_images_items order by id---
+delete from cata_images_items where parent=4---
+select count(*) from cata_images_items where parent=3---
+select * from cata_images_items order by id---
+select * from cata_images_items order by id---
+delete from cata_images_items where id>=30---
+select * from cata_images_items order by id---
+select * from cata_images_items---
+delete from cata_images_items where id>=254---
+select * from cata_images_items---
+select * from goods_items---
+delete from cata_images_items where id>=30---
+select * from cata_images_items---
+select * from cata_images_items---
+delete from cata_images_items where id>=30---
+select * from cata_images_items---
+delete from cata_images_items where id>=30---
+select * from cata_images_items---
+select * from cata_images_items---
+Select * from cata_images_folders---
+select * from goods_cats---
+Select * from cata_images_folders---
+insert into goods_items (select id, id as c_order_id, subtype as parent, `name`, `type`, 0, description, '', shorthand, maker,price,units,amount,1,'',`date` as created from goods) ---
+insert into goods_items (select id, id as c_order_id, subtype as parent, `name`, `type`, 0, description, '', shorthand, maker,price,units,amount,1,'',`date` as created) from goods---
+insert into goods_items values (select id, id as c_order_id, subtype as parent, `name`, `type`, 0, description, '', shorthand, maker,price,units,amount,1,'',`date` as created) from goods---
+insert into goods_items values (select id, id as c_order_id, subtype as parent, name, type, 0, description, '', shorthand, maker,price,units,amount,1,'',`date` as created) from goods---
+describe goods_items---
+select * from goods---
+select * from goods_subcats---
+insert into goods_subcats select * from (select c.code as id, c.code as c_order_id, g.id as parent, c.name as name, 0, c.type as type, '' from goods_cats g inner join cat c on (g.type=c.type)) AS t---
+insert into goods_subcats select * from (select c.code as id, c.code as c_order_id, g.id as parent, c.name as name, 0, c.type as type, '' from goods_cats g inner join cat c on (goods_cats.type=cat.type)) AS t---
+select * from goods_cats inner join cat on (goods_cats.type=cat.type)---
+insert into goods_subcats select * from (select * from goods_cats inner join cat on (goods_cats.type=cat.type)) AS t---
+insert into goods_subcats select * from (select * from goods_cats inner join cat on (goods_cats.type=cat.type))---
+select * from goods_cats inner join cat on (goods_cats.type=cat.type)---
+select * from goods_cats inner join cat on (main.type=cat.type)---
+select * from main inner join cat on (main.type=cat.type)---
+insert into goods_subcats (select t.code AS id, t.code AS c_order_id, t.name, 0, t.type, ''
+  FROM cat t)---
+insert into goods_subcats (code AS id, code AS c_order_id, t.name, 0, t.type, ''
+  FROM cat t---
+select * from cat---
+select * from goods_cats---
+insert into goods_cats (SELECT 
+       @rownum := @rownum + 1 AS id, @rownum AS c_order_id, t.name, 0, t.type, ''
+  FROM main t, 
+       (SELECT @rownum := 0) r)---
+insert into goods_cats (SELECT 
+       @rownum := @rownum + 1 AS id, @rownum AS c_order_id, t.name, 0, t.type, t.data
+  FROM main t, 
+       (SELECT @rownum := 0) r)---
+insert into goods_main (SELECT 
+       @rownum := @rownum + 1 AS id, @rownum AS c_order_id, t.name, 0, t.type, t.data
+  FROM main t, 
+       (SELECT @rownum := 0) r)---
+SELECT t.*, 
+       @rownum := @rownum + 1 AS rank
+  FROM main t, 
+       (SELECT @rownum := 0) r---
+Select ROWNUM() from main---
+Select ROW_NUMBER() from main---
+select * from main---
+select * from addons_items---
+select * from addons_images---
+select * from goods---
+select * from main---
+select * from cat---
+select * from main---
+select * from cat---
+select * from main---
+show tables---
+select * from subcat---
+select * from cat---
+describe cat---
+describe cats---
+show tables---
+update cata_catalogs set tables='{"addons_goods":{"item_id":"INT","name":"INT"},"addons_items":{"title":"VARCHAR(100)","img":"INT","price":"INT","shorthand":"TEXT"}}', skin='' where id=5
+---
+select * from cata_catalogs---
+update images_items set url = replace (url, ' ', '')---
+select * from cata_images_items---
+update cata_images_items set url = replace (url, ' ', '')---
+select * from images_items---
+select * from addons_items---
+select * from addons_goods---
+INSERT INTO `cata_catalogs` (`id`, `name`, `type`, `tables`) VALUES
+(default, 'addons', 2, '[{"tableName":"addons_goods","item_id":"INT","name":"TEXT"},{"tableName":"addons_items","title":"VARCHAR(100)","img":"INT","price":"INT","shorthand":"TEXT"}]')---
+INSERT INTO `cata_catalogs` (`id`, `name`, `type`, `tables`) VALUES
+(3, 'addons', 2, '[{"tableName":"addons_goods","item_id":"INT","name":"TEXT"},{"tableName":"addons_items","title":"VARCHAR(100)","img":"INT","price":"INT","shorthand":"TEXT"}]')---
+select * from cata_catalogs---
+select * from cata_images_items---
+insert into cata_images_items select id, id as c_order_id, parent, url, title, description, type, size from images_items---
+select  * from images_items---
+describe cata_images_items---
+select  * from images_items---
+select  * from cata_images_folders---
+insert into cata_images_folders select id, id as c_order_id, name from images_folders---
+insert into images_folders select id, id as c_order_id, name from images_folders---
+describe cata_images_folders---
+select  * from images_folders---
+show tables---
+select * from images_items---
+select * from images_folders---
+show tables---
+delete from users---
+delete from users---
+delete from users---
+select * from users---
+select * from users---
+select * from users---
+UPDATE `users` SET `contacts`='{"phone":"12","address":null}' WHERE id=87---
+select * from users---
+select * from users---
+delete from users where id=86---
+select * from users---
+select * from users---
+delete from users where id=81
+---
+select * from users---
+delete from users where id=76---
+select * from users---
+delete from users where id=75---
+select * from users---
+delete from users where id=74---
+select * from users---
+delete from users where id=73---
+select * from users---
+delete from users where id=72---
+select * from users---
+delete from users where id=71
+---
+select * from users---
+delete from users where id=70---
+select * from users---
+select * from users---
+delete from users where id=69---
+select * from users---
+select * from users---
+delete from users where id=68---
+select * from users---
+describe users---
+describe employer---
+delete from users where id=66---
+select * from users---
+select * from users---
+delete from users where id=65---
+delete from users where id=64---
+select * from users---
+delete from users where id=63---
+select * from users---
+delete * from users where id=63---
+select * from users---
+delete * from users where email=sirotininailona@mail.ru---
+select * from users---
+delete from users---
+INSERT INTO `vacancies` (`id`,`title,`content`,`img`,`salary_from`,`salary_to`,`city_id`,`data`,`poster`) VALUES (default,'Новая вакансия','',0,0,0,0,'',12)---
+INSERT INTO `vacancies` (`id`,`title,`content`,`img`,`salary_from`,`salary_to`,`city_id`,`data`,`poster`)VALUES(default,'Новая вакансия','',0,0,0,0,'',12)---
+INSERT INTO `vacancies` (`id`,`title,`content`,`img`,`salary_from`,`salary_to`,`city_id`,`data`,`poster`)VALUES(default,'Новая вакансия','','0','0','0','0','',12---
+select * from users---
+select * from users
+---
+SELECT max(id) from users---
+SELECT max(id) from vacancies---
+SELECT id from users where poster =1 order by id desc---
+SELECT id from users where poster =1 desc---
+select * from vacancies---
+describe vacancies---
+select * from news limit 1, (select count(*) from news)---
+select * from news limit 1, select count(*) from news---
+select * from news where NOT id IN ( select id from news limit 1, 3)---
+select * from news where id NOT IN ( select id from news limit 1, 3)---
+select * from news
+SUBTRACT
+select * from news limit 1, 3---
+select * from news
+EXCEPT
+select * from news limit 1, 3---
+select * from news
+MINUS
+select * from news limit 1, 3
+---
+select * from news where ROWNUM > 3---
+select top 4 from news---
+select * from news where row_number() > 3---
+select * from news---
+insert into news values (default, ' В ядрах Samsung M1 заложены принципы работы нейронной сети',31,'Процессор Exynos 8890 является выдающимся продуктом южнокорейского техногиганта Samsung. Из восьми ядер чипсета четыре представляют собой собственную разработку компании Samsung под кодовым названием Mongoose.','',NOW(),0,0,'')---
+insert into news values (default, ' Мобильные версии Google Docs и Google Sheets получили поддержку расширений',30,'омпания Google анонсировала поддержку сторонних расширений для своих приложений Docs и Sheets для Android. Это должно обеспечить бесшовную интеграцию мобильных офисных пакетов компании с другими инструментами, повышающими продуктивность работы с текстами и таблицами','',NOW(),0,0,'')---
+insert into news values (default, 'Google намерен бороться с навязчивой рекламой на мобильных устройствах',29,'В последнее время всё больше пользователей выходят в Сеть с мобильных устройств. По данным исследовательской компании TNS, в России 64 % пользователей Интернета ежедневно используют для этого смартфоны и планшеты. При этом на гаджеты такого типа приходится около 30 % всех поисковых запросов.','',NOW(),0,0,'')---
+insert into news values (default, 'Использование нанокристаллов позволило увеличить скорость передачи данных технологии Li-Fi',28,'Традиционные беспроводные коммуникационные технологии, такие, как Bluetooth или Wi-Fi, используют для передачи данных электромагнитные волны радиочастотного диапазона.','',NOW(),0,0,'')---
+insert into news values (default, 'Распознавание лиц стало общедоступной, быстрой и дешевой технологией',27,'Распознавание лиц сегодня набирает широкие обороты. Это связано, в частности, с высокой популярностью различных социальных веб-сервисов, включая социальные сети и мобильные приложения. Поэтому немудрено, что именно эти социальные технологии стараются сегодня быть как можно ближе к людям и распознавание лиц - серьезный шаг навстречу в этом направлении.','',NOW(),0,0,'')---
+describe news---
+select * from news---
+select * from news
+---
+SELECT id FROM `news`---
+describe news---
+select * from users---
+describe news---
+describe article---
+insert into strings values (default, 'test_string','Тестовая строка','{"ru":"Тестовая строка","eng":"Test string","fr":"ligne d\'essai"}','')---
+insert into strings values (default, 'test_string','Тестовая строка','{"ru":"Тестовая строка","eng":"Test string","fr":"ligne d'essai"}','')---
+select * from strings---
+describe news---
+SELECT * FROM strings WHERE name='приветствие'---
+SELECT * FROM strings WHERE name=44---
+describe news---
+CREATE TABLE IF NOT EXISTS `news` (
+`id` INT  PRIMARY KEY AUTO_INCREMENT,
+`title` VARCHAR(1000) DEFAULT '',
+`img` INT,
+`shorthand` TEXT DEFAULT '',
+`content`  MEDIUMTEXT,
+`published` DATETIME,
+`views`  INT,
+`user_type` INT,
+`data` text  DEFAULT ''
+)---
+CREATE TABLE IF NOT EXISTS `news` (
+`id` INT  PRIMARY KEY AUTO_INCREMENT,
+`title` VARCHAR(1000) DEFAULT '',
+`img` INT,
+`shorthand` TEXT DEFAULT '',
+`content`  MEDIUMTEXT,
+`published` DADETIME,
+`views`  INT,
+`user_type` INT,
+`data` text  DEFAULT ''
+)---
+select * from strings---
+INSERT INTO strings (`name`,`description`,`content`,`data`) VALUE('приветствие', 'хорошая девчонка','{"ru":"привет","en":"hello"}', 'магическое поле')---
+select * from strings---
+select * from strings---
+INSERT INTO strings (`name`,`description`,`content`,`data`) VALUE('ilonka', 'хорошая девчонка','В лему родилась елочка, в лесу она росла', 'магическое поле')
+---
+INSERT INTO string (`name`,`description`,`content`,`data`) VALUE('ilonka', 'хорошая девчонка','В лесу родилась елочка, в лесу она росла', 'магическое поле')
+---
+CREATE TABLE IF NOT EXISTS `strings` (
+`id` INT AUTO_INCREMENT,
+`name` VARCHAR(150) DEFAULT '' ,
+`description` VARCHAR(1000) DEFAULT '',
+`content`  MEDIUMTEXT,
+`data` text  DEFAULT '',
+PRIMARY KEY(id,name))---
+CREATE TABLE IF NOT EXISTS `strings` (
+  
+`id` int  PRIMARY KEY AUTO_INCREMENT,
+ 
+`name` VARCHAR(150) DEFAULT '' PRIMARY KEY,
+`description` VARCHAR(1000) DEFAULT '',
+`content`  MEDIUMTEXT,
+`data` text  DEFAULT ''
+)---
+CREATE TABLE IF NOT EXISTS `strings` (
+  
+`id` int  PRIMARY KEY AUTO_INCREMENT,
+ 
+`name` VARCHAR(1000) DEFAULT '' PRIMARY KEY,
+`description` VARCHAR(1000) DEFAULT '',
+`content`  MEDIUMTEXT,
+`data` text  DEFAULT ''
+)---
+select * from users where id=8---
+select * from users where id=8---
+CREATE TABLE IF NOT EXISTS `strings` (
+  
+`id` int  PRIMARY KEY AUTO_INCREMENT,
+ 
+`name` VARCHAR(1000) DEFAULT '' PRIMARY KEY,
+`description` VARCHAR(1000) DEFAULT '',
+`content`  MEDIUMTEXT DEFAULT '{"ru": " "
+}',
+`data` text  DEFAULT ''
+)---
+select * from users where id=8---
+select * from users where id=8---
+select * from users where id=8---
+select * from users where id=8---
+select * from users---
+select * from users---
+select * from users---
+update users set lastonline=""---
+select * from users---
+update users set lastonline=NOW()---
+CREATE TABLE IF NOT EXISTS `strings` (
+  
+`id` int  PRIMARY KEY AUTO_INCREMENT,
+ 
+`name` VARCHAR(1000) DEFAULT '' PRIMARY KEY,
+`description` VARCHAR(1000) DEFAULT '',
+`content`  MEDIUMTEXT DEFAULT '',
+`data` text  DEFAULT ''
+)---
+select * from users---
+CREATE TABLE IF NOT EXISTS `strings` (
+  
+`id` int  PRIMARY KEY AUTO_INCREMENT,
+ 
+`name` VARCHAR(1000) DEFAULT '' PRIMARY KEY AUTO_INCREMENT,
+`description` VARCHAR(1000) DEFAULT '',
+`content`  MEDIUMTEXT DEFAULT '',
+`data` text  DEFAULT ''
+)---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+ALTER TABLE users ADD COLUMN lastonline datetime DEFAULT NULL AFTER resumee---
+select * from users---
+show tables---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from cata_logger_journal order by id desc limit 5---
+select * from cata_logger_journal order by id desc---
+select * from cata_logger_journal order by id desc---
+select * from cata_logger_journal---
+select * from cata_logger_journal---
+select * from logger_journal---
+select * from cata_logger_journal---
+select * from logger_journal---
+show tables---
+select * from logger_journal---
+select * from loggerjournal---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from users---
+delete  from user_files---
+select * from user_files---
+delete  from user_files---
+describe  user_files---
+select * from user_files---
+delete  from user_files---
+delete * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from user_files---
+select * from resumee_tags---
+---
+describe user_files---
+select * from user_files---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+delete from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from user_files---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+select * from resumee_tags---
+SELECT * from `resumee_tags` WHERE `user`=1---
+select * from resumee_tags---
+alter table resumee_tags CHANGE COLUMN `resumee` `user` INT;---
+select * from resumee_tags---
+select * from user_files---
+CREATE TABLE IF NOT EXISTS `user_files` (
+  `id` int  PRIMARY KEY AUTO_INCREMENT,
+  `user` int DEFAULT 0,
+  `filename` text DEFAULT '',
+  `url` text DEFAULT '',
+  `type` text  DEFAULT '',
+  `data` text  DEFAULT ''
+)---
+select * from user_files---
+user_files ="CREATE TABLE IF NOT EXISTS `user_files` (
+  `id` int  PRIMARY KEY AUTO_INCREMENT,
+  `user` int DEFAULT 0,
+  `filename` text DEFAULT '',
+  `url` text DEFAULT '',
+  `type` text  DEFAULT '',
+  `data` text  DEFAULT ''
+)";---
+
+drop_user_files = "DROP TABLE IF EXISTS `user_files` ";---
+$drop_user_files = "DROP TABLE IF EXISTS `user_files` ";
+
+---
+
+$user_files ="CREATE TABLE IF NOT EXISTS `user_files` (
+  `id` int  PRIMARY KEY AUTO_INCREMENT,
+  `user` int DEFAULT 0,
+  `filename` text DEFAULT '',
+  `url` text DEFAULT '',
+  `type` text  DEFAULT '',
+  `data` text  DEFAULT ''
+)";---
+$drop_user_files = "DROP TABLE IF EXISTS `user_files` ";
+$user_files ="CREATE TABLE IF NOT EXISTS `user_files` (
+  `id` int  PRIMARY KEY AUTO_INCREMENT,
+  `user` int DEFAULT 0,
+  `filename` text DEFAULT '',
+  `url` text DEFAULT '',
+  `type` text  DEFAULT '',
+  `data` text  DEFAULT ''
+)";---
+select * from resumee---
+select * from users---
+select * from users---
+select * from users---
+select * from resumee---
+select * from users---
+select * from users---
+select * from users---
+SELECT `id` from `resumee` WHERE `poster` = 31---
+select * from users---
+UPDATE `users`
+SET `resumee`='12'
+WHERE id=35---
+UPDATE `users` WHERE id=36 (`resumee`) VALUES (12) WHERE id=36---
+INSERT INTO `users` WHERE id=36 (`resumee`) VALUES (12) WHERE id=36---
+INSERT INTO `users` (`resumee`) VALUES (12) WHERE id=36---
+INSERT INTO `users` (`resumee`) VALUES ('12') WHERE `id`=36---
+select * from users---
+select * from users---
+select * from users---
+SELECT `id` from `resumee` WHERE `poster` = 31---
+select * from resumee---
+SELECT `id` from `resumee` WHERE `poster` = 31---
+select * from resumee---
+select * from users---
+SELECT `id` from `RESUMEE` WHERE `poster` = 31---
+select * from resumee---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+ALTER TABLE users ADD column resumee INT AFTER data  ---
+select * from users---
+ALTER TABLE users DROP resumee---
+select * from users---
+ALTER TABLE users ADD resumee INTEGER---
+select * from users---
+ALTER TABLE 'users' ADD 'resumee' integer---
+ALTER TABLE 'users' ADD 'resumee' integer;---
+select * from cata_users---
+select * from users---
+select * from resumee_tags---
+---
+select * from users_tags---
+select * from tags---
+select * from resumee_tags---
+select * from resumee---
+INSERT INTO resumee_tags values(default,1120 ,2,0)---
+select * from resumee_tags---
+INSERT INTO resumee_tags values(default,612,10,0)---
+INSERT INTO resumee_tags values(default,612,2,0)---
+INSERT INTO resume_tags values(default,612,2,0)---
+select * from resumee_tags---
+select * from resumee---
+select * from resumee
+---
+select DISTINCT resumee from (select DISTINCT resumee AS rsm from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) ) as tbl INNER JOIN resumee_tags ON(tbl.rsm = resumee_tags.resumee) WHERE tag IN (1264, 1283)---
+select DISTINCT resumee from (select DISTINCT resumee AS rsm from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) ) as tbl INNER JOIN resumee_tags ON(tbl.rsm = resumee_tags.resumee) WHERE tag IN (1264, 1283)---
+select * from (select DISTINCT resumee AS rsm from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) ) as tbl INNER JOIN resumee_tags ON(tbl.rsm = resumee_tags.resumee) WHERE tag IN (1264, 1283)---
+select * from (select DISTINCT resumee from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) ) as tbl---
+select * from (select resumee from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) ) as tbl ---
+select * from (select DISTINCT resumee.*, resumee_tags.tag from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) ) as tbl---
+select * from (select DISTINCT * from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) ) as tbl---
+select * from (select * from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) ) as tbl---
+select * from (select * from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) ) as tbl where---
+select * from (select DISTINCT * from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) ) as tbl where ---
+select * from (select DISTINCT resumee, tag from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) ) as tbl---
+select * from tbl (select DISTINCT resumee, tag from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) )---
+select * from tbl as (select DISTINCT resumee, tag from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) ) ---
+select * from(select DISTINCT resumee, tag from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) )---
+select DISTINCT resumee, tag from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id) WHERE tag IN (1278, 1275) OR tag IN (1264, 1283)---
+select DISTINCT resumee, tag from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id)---
+select * from resumee INNER JOIN resumee_tags ON (resumee_tags.resumee = resumee.id)---
+with DB as (SELECT * FROM tags);
+ SELECT * FROM DB---
+with DB as (SELECT * FROM tags) SELECT * FROM DB---
+SELECT * FROM `resumee` INNER JOIN resumee_tags ON (resumee.id = resumee_tags.resumee) WHERE salary_from >1000 AND salary_to < 1000000 AND tag IN (1257)---
+SELECT * FROM `resumee` INNER JOIN resumee_tags ON (resumee.id = resumee_tags.resumee) WHERE salary_from >1000 AND salary_to < 1000000 AND tag IN (612)---
+SELECT * FROM `resumee` INNER JOIN resumee_tags ON (resumee.id = resumee_tags.resumee) WHERE salary_from >1000 AND salary_to < 1000000 AND tag IN (612) with tag in(1257)---
+SELECT * FROM `resumee` INNER JOIN resumee_tags ON (resumee.id = resumee_tags.resumee) WHERE salary_from >1000 AND salary_to < 1000000---
+SELECT DISTINCT `resumee` FROM `resumee` INNER JOIN resumee_tags ON (resumee.id = resumee_tags.resumee) WHERE salary_from >1000 AND salary_to < 1000000 ---
+select * from resumee_tags---
+select * from resumee---
+select * from tags---
+select * from tag---
+select * from resumee---
+select * from resumee---
+SELECT DISTINCT resumee FROM resumee INNER JOIN resumee_tags ON (resumee.id = resumee_tags.resumee) WHERE salary_from <100000 AND salary_to > 10000---
+select DISTINCT resumee from resumee inner join resumee_tags ON (resumee.id = resumee_tags.resumee) WHERE salary_from >1000 AND salary_to < 1000000 AND tag IN (1278, 1264, 1261)---
+select resumee from resumee inner join resumee_tags ON (resumee.id = resumee_tags.resumee) WHERE salary_from >1000 AND salary_to < 1000000 AND tag IN (1278, 1264, 1261)---
+select * from resumee inner join resumee_tags ON (resumee.id = resumee_tags.resumee) WHERE salary_from >1000 AND salary_to < 1000000---
+select * from resumee inner join resumee_tags ON (resumee.id = resumee_tags.resumee)---
+select * from resumee---
+select * from resumee---
+select * from resumee---
+select * from users---
+select * from users---
+SELECT * FROM `resumee` where not(salary_to<30000) and not(salary_from>40000)---
+SELECT * FROM `resumee` where not(salary_to<20000) and not(salary_from>30000)---
+SELECT * FROM `resumee` where not(salary_to<20000) and not(salary_from>3000)---
+SELECT * FROM `resumee` where not(salary_to<10000) and not(salary_from>15000)---
+SELECT * FROM `resumee` where not(salary_to<20000) and not(salary_from>25000)---
+SELECT * FROM `resumee` where not(salary_to>20000) and not(salary_from>25000)---
+SELECT * FROM `resumee` where not(salary_to>50000)---
+SELECT * FROM `resumee` where now(salary_to>50000)---
+SELECT * FROM `resumee` where now(salary_to>50000)---
+---
+SELECT * FROM `resumee` where now(salary_to>50000)---
+SELECT * FROM `resumee` where now(salary_from>50000)---
+SELECT * FROM `resumee` where now(salary_from>50000)---
+SELECT * FROM `resumee` where now(salary_from>10000) ---
+SELECT * FROM `resumee`---
+select* from resumee---
+select* from tags---
+select* from tag
+---
+delete from resumee_tags---
+select distinct * from resumee_tags---
+select distinct from resumee_tags---
+select* from resumee_tags---
+select * from resumee_tags where resumee = 2---
+SELECT * FROM resumee_tags INNER JOIN tags ON resumee_tags.tag = tags.id WHERE resumee_tags.resumee = 2 AND tags.type=3---
+SELECT * FROM resumee_tags LEFT JOIN tags ON resumee_tags.tag = tags.id WHERE ---
+SELECT * FROM resumee_tags JOIN tags ON resumee_tags.tag = tags.id---
+SELECT * FROM resumee_tags JOIN tags ON resumee_tags.tag = tags.tag---
+SELECT * FROM `tags`,`resumee_tags`  where resumee_tags.id=1275 and tags.type=3---
+select * from resumee_tags---
+select* from resumee_tags---
+
+update users  set type = 0 where auth_id = 19444244 ---
+select *from users---
+select * from resumee_tags---
+delete from users where auth_id = 19444244---
+delete from users where auth_id = 19444244---
+delete * from users where auth_id = 19444244---
+select *from users---
+select * from resumee_tags---
+select * from user---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary))  as lw, CONVERT(CONVERT('%Ко%' USING utf8) USING binary)   as lc from tags where LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary)) like CONVERT(CONVERT('%ко%' USING utf8) USING binary) ---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary))  as lw, CONVERT(CONVERT('%Ко%' USING utf8) USING binary)   as lc from tags where LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary)) like CONVERT(CONVERT('%ко%' USING utf8) USING binary) and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary))  as lw, CONVERT(CONVERT('%Ко%' USING utf8) USING binary)   as lc from tags where LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary)) like CONVERT(CONVERT('%Ко%' USING utf8) USING binary) and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary))  as lw, CONVERT(CONVERT('%Ко%' USING utf8) USING binary)   as lc from tags where lw like lc and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary))  as lw, CONVERT(CONVERT('%Ко%' USING utf8) USING binary)   from tags where LOWER(name)like '%Ко%' and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary))  as lw, CONVERT('%Ко%' USING utf8)   from tags where LOWER(name)like '%Ко%' and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary))  as lw from tags where LOWER(name), CONVERT('%Ко%' USING utf8) like '%Ко%' and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary))  as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, CONVERT(LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary)) USING cp1251) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, CONVERT(LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary)) USING utf8) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary)) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING cp1251)) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING cp1251)) USING binary)) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING utf8)) USING binary)) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING binary)) USING binary)) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING binary)) USING cp1251)) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, LOWER(CONVERT(LOWER(CONVERT(name USING binary)) USING utf8)) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, LOWER(LOWER(CONVERT(name USING binary))) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, LOWER(CONVERT(name USING koi8)) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, LOWER(CONVERT(name USING binary)) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, LOWER(CONVERT(name USING cp1251)) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select name, LOWER(CONVERT(name USING utf8)) as lw from tags where LOWER(name) like '%Ко%' and type=3 ---
+select name, LOWER(name) as lw from tags where LOWER(name) like '%Ко%' and type=3---
+select * from tags where LOWER(name) like '%Ко%' and type=3---
+select * from tags where LOWER(name) like '%ко%' and type=3---
+select * from tags where name like '%ко%' and type=3---
+select * from tags where name like '%ко%'---
+SELECT * from tags where type=3---
+SELECT * from resumee_tags---
+SELECT * from resumee_tags---
+SELECT * from resumee_tags---
+SELECT * from resumee_tags---
+SELECT * from resumee_tags---
+SELECT * from resumee_tags---
+SELECT * from resumee_tags---
+SELECT * from resumee_tags---
+SELECT * from resumee_tags---
+SELECT * from resumee_tags---
+SELECT * from resumee_tags---
+SELECT * from resumee_tags---
+SELECT * from tags---
+SELECT * from tags---
+SELECT * from resumee---
+SELECT * from resumee_tags---
+SELECT * from resumee_tags---
+---
+SELECT * from tags---
+SELECT * from TAGS---
+SELECT * from resumee_tags---
+SELECT * FROM `tags`,`resumee_tags`  where resumee_tags.id=1 ---
+SELECT * from users---
+update users set type=0---
+SELECT * from users---
+SELECT * from resumee---
+SELECT * from resumee---
+SELECT * from resumee---
+SELECT * from resumee---
+SELECT * from resumee---
+SELECT * from resumee---
+SELECT * from resumee---
+SELECT * from resumee---
+SELECT * from resumee---
+SELECT * from resumee---
+SELECT * from `users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+select * from users---
+---
+select * from users---
+select * from users---
+select * from user---
+SELECT id FROM tags WHERE name LIKE '%Мос%' UNION SELECT email FROM users; /*!%' AND type=1 */---
+SELECT id FROM tags WHERE name LIKE '%Мос%' UNION SELECT email FROM users; /*!%' AND type=1---
+SELECT id FROM tags WHERE name LIKE '%Мос%' UNION SELECT email FROM users; /*%' AND type=1---
+SELECT id FROM tags WHERE name LIKE '%Мос' UNION SELECT id FROM users;---
+SELECT id FROM tags WHERE name LIKE '%Мос' UNION SELECT email FROM users;---
+SELECT id FROM tags WHERE name LIKE '%Мос%' UNION SELECT balance FROM users; ---
+SELECT id FROM tags WHERE name LIKE '%Мос' UNION SELECT balance FROM users;---
+select * from users---
+select * from users---
+select * from users---
+describe users---
+update users set data='[{"title":"Образование","content":"Школа: Гимназия 74  Университет: БГУИР, оператор станка трактора "},{"title":"Опыт работы","content":"Оператор трактора, Белбакалея, 2012-2013 г. Оператор станка по производству тракторов, 2013-2015 г. Балерина, 2015-2016 г."},{"title":"Персональные данные","content":"Дата рождения: 10.10.2010г. Семейное положение: женат Языки: английский, русский"},{"title":"Рекомендации","content":"Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.  Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.  Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу.  Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь. По дороге встретил текст рукопись. Она предупредила его: «В моей стране все переписывается по несколько раз. Единственное, что от меня осталось, это приставка «и». Возвращайся ты лучше в свою безопасную страну». Не послушавшись рукописи, наш текст продолжил свой путь. Вскоре ему повстречался коварный составитель "}]'

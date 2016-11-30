@@ -1,0 +1,103 @@
+<?xml version ='1.0' encoding ='UTF-8' ?> 
+<definitions name='RService' 
+ targetNamespace='http://example.org/' 
+ xmlns:tns=' http://example.org/' 
+ xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' 
+ xmlns:xsd='http://www.w3.org/2001/XMLSchema' 
+ xmlns:soapenc='http://schemas.xmlsoap.org/soap/encoding/' 
+ xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/' 
+ xmlns='http://schemas.xmlsoap.org/wsdl/'> 
+
+<message name='getQuoteRequest'> 
+ <part name='symbol' type='xsd:string'/> 
+</message>
+
+<message name='getQuoteResponse'> 
+ <part name='Result' type='xsd:float'/> 
+</message> 
+
+<message name='getSumRequest'>
+  <part name='a' type='xsd:float' />
+  <part name='b' type='xsd:float' />
+</message>
+
+<message name='getSumResponse'>
+  <part name='sum' type='xsd:float'/>
+  <part name='date' type='xsd:string'/>
+</message>
+
+
+<!-- -->
+    <message name='getCategoriesRequest'>
+    
+    </message>
+
+    <message name='getCategoriesResponse'>
+        <part name='data' type='xsd:string'/>
+    </message>
+<!-- -->
+
+<portType name='RServicePortType'> 
+
+ <operation name='getQuote'> 
+  <input message='tns:getQuoteRequest'/> 
+  <output message='tns:getQuoteResponse'/> 
+ </operation>
+ 
+ <operation name='getSum'> 
+  <input message='tns:getSumRequest'/> 
+  <output message='tns:getSumResponse'/> 
+ </operation>
+ 
+ <!-- -->
+    <operation name='getCategories'> 
+        <input message='tns:getCategoriesRequest'/> 
+        <output message='tns:getCategoriesResponse'/> 
+    </operation>
+ <!-- -->
+</portType> 
+
+<binding name='RServiceBinding' type='tns:RServicePortType'> 
+ 
+ <soap:binding style='rpc' transport='http://schemas.xmlsoap.org/soap/http'/> 
+ 
+ <operation name='getQuote'>
+  <input> 
+   <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+  </input> 
+  
+  <output> 
+   <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+  </output> 
+ </operation>
+ 
+ <operation name='getSum'>
+  <input> 
+   <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+  </input> 
+  <output> 
+   <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+  </output> 
+ </operation>
+ 
+ 
+ <!-- -->
+    <operation name='getCategories'> 
+        <input> 
+           <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+        </input> 
+        
+        <output> 
+           <soap:body use='encoded' encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/> 
+        </output> 
+    </operation>
+ <!-- -->
+</binding>
+
+<service name='RService'> 
+ <port name='RServicePort' binding='RServiceBinding'> 
+  <soap:address location='http://services.retarcorp.com/server.php'/>
+ </port> 
+</service>
+
+</definitions> 
